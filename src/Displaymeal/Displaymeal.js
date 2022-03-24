@@ -4,6 +4,7 @@ import Show from '../Show/Show'
 
 const Displaymeal = () => {
     const [meals, SetMeals] = useState([])
+    // const [cart, SetCart] = useState([])/////
     useEffect(() => {
         fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=a")
             .then(res => res.json())
@@ -11,7 +12,7 @@ const Displaymeal = () => {
     }, [])
 
     const handle = (meal) => {
-        console.log("Helo boy", meal)
+        Card(meal)
     }
     return (
         <div className='row'>

@@ -1,12 +1,14 @@
 import React from 'react'
 import './Card.css'
+
+
 const Card = (props) => {
-    console.log("good", props)
-    const { strMeal } = props
+    const { strMeal, strArea } = props
+    console.log("hellsdfasdf", props)
     return (
         <div className='bg-success name ps-2 h-100 w-100'>
-            <h2>{strMeal}</h2>
-            <h4>Name:</h4>
+            <h4>Name:{strMeal}</h4>
+            <h4>Name:{strArea}</h4>
         </div>
     )
 }
