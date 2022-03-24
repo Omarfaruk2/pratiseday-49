@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 // import { logo } from "../img/z.svg"
+import logo from '../img/logo.png'
 
 const Header = () => {
     return (
@@ -9,7 +10,7 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
-                            src="../img/z.svg"
+                            src={logo}
                             width="30"
                             height="30"
                             className=""

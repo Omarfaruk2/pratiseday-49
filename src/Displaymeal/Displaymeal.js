@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Card from '../Card/Card'
 import Show from '../Show/Show'
 
 const Displaymeal = () => {
@@ -8,15 +9,25 @@ const Displaymeal = () => {
             .then(res => res.json())
             .then(data => SetMeals(data["meals"]))
     }, [])
+
+    const handle = (meal) => {
+        console.log("Helo boy", meal)
+    }
     return (
-        <div>
-            <div className="row container mx-auto">
+        <div className='row'>
+            <div className="container col-10 row mx-auto">
                 {
                     meals.map(meal => <Show
                         key={meal.idMeal}
                         meal={meal}
+                        handle={handle}
                     ></Show>)
                 }
+            </div>
+            <div className='col-2'>
+                <Card
+
+                ></Card>
             </div>
         </div>
     )
